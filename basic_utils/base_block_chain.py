@@ -1,4 +1,4 @@
-import hashlib
+from hashlib import sha512
 import secrets
 import string
 
@@ -22,9 +22,9 @@ class BaseBlockChain():
             secrets.choice(string.printable)
             for i in range(str_length)
         )
-        genesis_hash = genesis_hash or hashlib.sha512(
+        genesis_hash = genesis_hash or sha512(
             bytes(genesis_string, 'utf-8')
-        )
+        ).hexdigest()
 
     def get_chain(self):
         """
