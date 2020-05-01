@@ -41,5 +41,5 @@ class BaseBlockChain():
         """String representation of the block chain"""
         string_representation = 'The Block Chain is:'
         for block in self.block_chain[1:]:
-            string_representation += '\n' + str(block)
+            string_representation += '\n' + block
         return string_representation
