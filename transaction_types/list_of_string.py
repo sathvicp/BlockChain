@@ -2,7 +2,7 @@ from basic_utils.base_block_chain import BaseBlockChain
 from hashlib import sha512
 
 
-class StringTransactionChain(BaseBlockChain):
+class StringTransactionsChain(BaseBlockChain):
     """
     The transaction type for this class is a tuple
     of transaction strings.\n
